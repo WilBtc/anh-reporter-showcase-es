@@ -1,0 +1,136 @@
+version: '3.8'
+
+services:
+  # PostgreSQL with TimescaleDB
+  postgres:
+    image: timescale/timescaledb:latest-pg15
+    container_name: anh-postgres
+    environment:
+      POSTGRES_DB: anh_reporter
+      POSTGRES_USER: anh_user
+      POSTGRES_PASSWORD: anh_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anh_user -d anh_reporter"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - anh-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: anh-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks:
+      - anh-network
+
+  # FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: anh-backend
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://anh_user:anh_password@postgres:5432/anh_reporter
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=${SECRET_KEY:-change-this-to-a-secure-random-key-in-production}
+      - DEBUG=true
+    ports:
+      - "9110:9110"
+    volumes:
+      - ./backend:/app
+      - ./data:/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9110/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - anh-network
+    restart: unless-stopped
+
+  # Rust Processing Engine
+  rust-engine:
+    build:
+      context: ./rust-engine
+      dockerfile: Dockerfile
+    container_name: anh-rust-engine
+    environment:
+      - RUST_LOG=info
+      - DATABASE_URL=postgresql://anh_user:anh_password@postgres:5432/anh_reporter
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - anh-network
+    restart: unless-stopped
+
+  # Vue 3 Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: anh-frontend
+    environment:
+      - VITE_API_URL=http://localhost:9110/api/v1
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - anh-network
+    restart: unless-stopped
+
+  # Nginx Reverse Proxy
+  nginx:
+    image: nginx:alpine
+    container_name: anh-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - backend
+      - frontend
+    networks:
+      - anh-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  anh-network:
+    driver: bridge

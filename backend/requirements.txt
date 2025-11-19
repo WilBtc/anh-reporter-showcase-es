@@ -1,0 +1,66 @@
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Database
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+alembic==1.13.1
+asyncpg==0.29.0
+
+# Redis
+redis==5.0.1
+hiredis==2.3.2
+
+# Authentication & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+bcrypt==4.1.2
+
+# Scheduling
+APScheduler==3.10.4
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.3
+scikit-learn==1.4.0
+
+# Industrial Protocols
+opcua==0.98.13
+pymodbus==3.6.3
+paho-mqtt==1.6.1
+
+# Utilities
+python-dotenv==1.0.0
+pytz==2023.3.post1
+python-dateutil==2.8.2
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+python-json-logger==2.0.7
+
+# FTP & Email
+aiosmtplib==3.0.1
+aioftp==0.22.3
+
+# File Processing
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+
+# HTTP Client
+httpx==0.26.0
+aiohttp==3.9.1
+
+# Validation
+jsonschema==4.20.0
+validators==0.22.0
+
+# Development
+pytest==7.4.4
+pytest-asyncio==0.23.3
+black==23.12.1
+flake8==7.0.0
+mypy==1.8.0
