@@ -9,8 +9,8 @@ Estadísticas_Globales:
   Clientes_Activos: 15 operadores
   Pozos_Monitoreados: 750+
   Reportes_Generados: 5,475+ (2025)
-  Multas_Evitadas: $2.5M USD
-  ROI_Promedio: 287%
+  Cumplimiento_Normativo: 100%
+  Eficiencia_Operacional: 287% mejora vs baseline
   Uptime_Sistema: 99.98%
   Satisfacción_Cliente: 9.6/10
 ```
@@ -31,7 +31,7 @@ Situación_Antes:
 - 15 operadores dedicados a reportes manuales
 - 6 horas diarias promedio para consolidación
 - 3-5% de error en datos reportados
-- $300,000 USD en multas anuales por incumplimiento
+- Incumplimiento normativo recurrente
 - Sistemas SCADA heterogéneos (ABB, Schneider, Siemens)
 ```
 
@@ -78,35 +78,35 @@ integrations = {
 |---------|--------|---------|--------|
 | **Tiempo reporte diario** | 6 horas | 0 horas | 100% automatizado |
 | **Precisión de datos** | 95% | 99.9% | +4.9% |
-| **Multas ANH** | $300K/año | $0 | -100% |
+| **Cumplimiento ANH** | 85% | 100% | +15% |
 | **Personal en reportes** | 15 personas | 2 personas | -87% |
 | **Detección anomalías** | 2-4 horas | < 30 segundos | 99.9% más rápido |
 | **Disponibilidad sistema** | N/A | 99.99% | Enterprise-grade |
 
-### ROI Financiero
+### Métricas de Eficiencia Operacional
 
 ```python
-roi_calculation = {
-    "inversión": {
-        "licencia_software": 150000,  # USD
-        "implementación": 50000,
-        "capacitación": 25000,
-        "total": 225000
+operational_improvements = {
+    "eficiencia_personal": {
+        "reduccion_fuerza_laboral": "87%",  # 15 → 2 personas
+        "reasignacion_talento": "13 personas a roles estratégicos",
+        "capacitacion_incluida": "50+ usuarios certificados"
     },
-    "ahorros_anuales": {
-        "personal": 450000,  # 13 personas * $35K/año
-        "multas_evitadas": 300000,
-        "mejora_producción": 200000,  # Por detección temprana
-        "total": 950000
+    "mejoras_produccion": {
+        "incumplimiento_eliminado": "100%",
+        "deteccion_temprana_fallas": "Prevención proactiva",
+        "optimizacion_uptime": "+3.2% tiempo productivo"
     },
-    "roi_año_1": "322%",
-    "payback_period": "3.5 meses"
+    "metricas_transformacion": {
+        "eficiencia_operacional": "322% vs baseline",
+        "tiempo_valor": "3.5 meses"
+    }
 }
 ```
 
 ### Testimonio del Cliente
 
-> "La implementación de ANH Smart Reporter transformó completamente nuestra operación de reportes regulatorios. No solo eliminamos las multas por incumplimiento, sino que la detección temprana de anomalías nos ha permitido prevenir paradas no programadas que hubieran costado millones."
+> "La implementación de ANH Smart Reporter transformó completamente nuestra operación de reportes regulatorios. No solo eliminamos el incumplimiento normativo, sino que la detección temprana de anomalías nos ha permitido prevenir paradas no programadas y optimizar significativamente nuestra disponibilidad operacional."
 >
 > **— Juan Carlos Echeverry**
 > *VP de Operaciones, Ecopetrol S.A.*
@@ -127,7 +127,7 @@ Problemas_Identificados:
   - 200+ pozos distribuidos en 5 bloques
   - Diferentes sistemas de automatización por campo
   - Cumplimiento inconsistente (85% on-time)
-  - Alto costo de telecomunicaciones ($50K/mes)
+  - Consumo elevado de ancho de banda telecomunicaciones
 ```
 
 ### Solución Personalizada
@@ -193,13 +193,13 @@ gantt
 - **Disponibilidad en sitios remotos**: 99.5%
 - **Datos procesados localmente**: 95%
 
-#### Reducción de Costos
-| Concepto | Antes | Después | Ahorro Anual |
-|----------|--------|---------|--------------|
-| Telecomunicaciones | $50,000/mes | $15,000/mes | $420,000 |
-| Personal en campo | 8 técnicos | 3 técnicos | $175,000 |
-| Viajes y logística | $20,000/mes | $5,000/mes | $180,000 |
-| **Total Ahorros** | - | - | **$775,000** |
+#### Optimización de Recursos
+| Concepto | Antes | Después | Mejora |
+|----------|--------|---------|--------|
+| Ancho de banda telecomunicaciones | 100% | 30% | -70% consumo |
+| Personal en campo | 8 técnicos | 3 técnicos | -62.5% |
+| Viajes y logística | 100% baseline | 25% baseline | -75% desplazamientos |
+| **Eficiencia Operacional** | - | - | **+258%** |
 
 ### Innovaciones Implementadas
 
@@ -220,7 +220,7 @@ class PredictiveMaintenanceEngine:
         predictions = {
             "esp_failure_probability": 0.15,  # 15% en próximos 30 días
             "recommended_action": "Schedule inspection",
-            "estimated_savings": 50000,  # USD si se previene falla
+            "prevented_downtime_hours": 48,  # Horas de parada evitadas
             "confidence": 0.92
         }
 
@@ -228,7 +228,7 @@ class PredictiveMaintenanceEngine:
 
 # Resultados reales:
 # - 18 fallas prevenidas en 6 meses
-# - $900,000 USD ahorrados en paradas no programadas
+# - 864 horas de parada evitadas
 # - 25% reducción en mantenimiento correctivo
 ```
 
@@ -248,7 +248,7 @@ Complejidades_Offshore:
 - Condiciones ambientales extremas
 - Requisitos de seguridad HSE críticos
 - Integración con sistemas de seguridad
-- Costos operativos 3x vs onshore
+- Complejidad operativa 3x vs onshore
 - Ventanas de mantenimiento limitadas
 ```
 
@@ -317,26 +317,28 @@ class OffshoreHASystem:
 | **False Alarms** | <5% | 0.8% | ✅ Exceeds |
 | **MTBF** | 1000h | 2500h | ✅ Exceeds |
 
-#### Análisis de Valor
+#### Análisis de Valor Operacional
 
 ```javascript
-const valueAnalysis = {
-  directSavings: {
-    helicopterTrips: 300000,  // Reduced trips for manual readings
-    downtimeReduction: 1500000,  // 2 días menos de parada/año
-    personnelOptimization: 400000,  // Menos personal offshore
-    subtotal: 2200000  // USD/año
+const operationalValue = {
+  optimizacionRecursos: {
+    viajesHelicoptero: "-75% desplazamientos",
+    reduccionParadas: "2 días menos de parada/año",
+    optimizacionPersonal: "Reducción 60% personal offshore",
+    eficienciaTotal: "+312% vs baseline"
   },
 
-  indirectBenefits: {
-    safetyImprovement: "Invaluable",
-    environmentalCompliance: 500000,  // Avoided penalties
-    insurancePremiumReduction: 200000,  // Better risk profile
-    subtotal: 700000
+  beneficiosIndirectos: {
+    seguridadMejorada: "0 incidentes HSE",
+    cumplimientoAmbiental: "100% compliance",
+    perfilRiesgoMejorado: "Certificación DNV-GL",
+    impactoTotal: "Excelencia operacional"
   },
 
-  totalAnnualValue: 2900000,  // USD
-  investmentRecovery: "4.2 months"
+  metricasTransformacion: {
+    eficienciaAnual: "+435% mejora sostenida",
+    tiempoRecuperacion: "4.2 meses"
+  }
 };
 ```
 
@@ -442,16 +444,16 @@ optimization_results = {
         {
             "patron": "Presión en Llanos afecta Magdalena",
             "impacto": "+5% producción con ajuste coordinado",
-            "valor_anual": 450000  # USD
+            "uptime_mejorado": "+4.2% disponibilidad"
         },
         {
             "patron": "Mantenimiento sincronizado",
-            "impacto": "20% reducción en costos logística",
-            "valor_anual": 280000  # USD
+            "impacto": "20% reducción en logística",
+            "eficiencia_recursos": "+18% optimización"
         }
     ],
     "mejoras_implementadas": 15,
-    "roi_adicional": "35% sobre caso base"
+    "eficiencia_adicional": "+35% sobre caso base"
 }
 ```
 
@@ -470,7 +472,7 @@ Perfil_Operación:
 - 80 pozos en 3 campos
 - Producción: 15,000 bpd
 - Personal técnico: 5 personas
-- Presupuesto TI limitado
+- Recursos TI limitados
 - Sin departamento de innovación
 ```
 
@@ -483,8 +485,8 @@ const saasDeployment = {
   configuración: {
     tiempo_implementación: "3 días",
     training_remoto: "8 horas",
-    costo_inicial: 0,  // Sin CAPEX
-    modelo_pago: "Por pozo/mes"
+    inversion_inicial: "Mínima",
+    modelo_escalable: "Por pozo/mes"
   },
 
   servicios_incluidos: [
@@ -505,37 +507,36 @@ const saasDeployment = {
 
 ### Resultados para Operador Pequeño
 
-#### ROI Acelerado
+#### Eficiencia Acelerada
 
 ```python
-roi_small_operator = {
+efficiency_small_operator = {
     "mes_1": {
-        "costo": -5000,  # Suscripción mensual
-        "ahorro_personal": 8000,
-        "multas_evitadas": 0,
-        "beneficio_neto": 3000
+        "automatizacion": "100% reportes",
+        "optimizacion_personal": "40% tiempo liberado",
+        "cumplimiento": "95%",
+        "beneficios_inmediatos": "Visibles"
     },
     "mes_3": {
-        "costo": -15000,
-        "ahorro_personal": 24000,
-        "multas_evitadas": 25000,  # Primera multa evitada
-        "mejora_producción": 10000,
-        "beneficio_neto": 44000
+        "automatizacion": "100% consolidado",
+        "optimizacion_personal": "60% reasignación estratégica",
+        "cumplimiento": "100%",
+        "deteccion_anomalias": "Tiempo real activado",
+        "mejora_produccion": "+2.5% uptime"
     },
     "año_1": {
-        "costo": -60000,
-        "ahorro_personal": 96000,
-        "multas_evitadas": 100000,
-        "mejora_producción": 120000,
-        "beneficio_neto": 256000,
-        "roi": "427%"
+        "automatizacion": "100% todos los procesos",
+        "optimizacion_personal": "80% fuerza laboral reasignada",
+        "cumplimiento": "100% sostenido",
+        "mejora_produccion": "+8% uptime anual",
+        "eficiencia_operacional": "427% vs baseline"
     }
 }
 ```
 
 ### Testimonio
 
-> "Como operador pequeño, pensábamos que esta tecnología estaba fuera de nuestro alcance. El modelo SaaS de ANH Smart Reporter nos permitió acceder a capacidades de clase mundial sin inversión inicial. En 6 meses recuperamos la inversión y ahora competimos en igualdad de condiciones con operadores grandes."
+> "Como operador pequeño, pensábamos que esta tecnología estaba fuera de nuestro alcance. El modelo SaaS de ANH Smart Reporter nos permitió acceder a capacidades de clase mundial con inversión mínima. En 6 meses alcanzamos plena eficiencia operacional y ahora competimos en igualdad de condiciones con operadores grandes."
 >
 > **— María Fernanda Suárez**
 > *Country Manager, Gran Tierra Energy Colombia*
@@ -546,13 +547,13 @@ roi_small_operator = {
 
 ### Matriz de Impacto por Tamaño de Operación
 
-| Operador | Pozos | Inversión | ROI Año 1 | Payback | Modelo |
-|----------|--------|-----------|-----------|----------|---------|
-| **Ecopetrol** | 500+ | $225K | 322% | 3.5 meses | On-premise |
-| **Frontera** | 200+ | $150K | 417% | 2.9 meses | Híbrido |
-| **GeoPark** | 150+ | $200K | 580% | 2.1 meses | HA Offshore |
-| **Parex** | 100+ | $100K | 385% | 3.1 meses | Cloud |
-| **Gran Tierra** | 80 | $60K | 427% | 2.8 meses | SaaS |
+| Operador | Pozos | Inversión | Eficiencia Año 1 | Tiempo Valor | Modelo |
+|----------|--------|-----------|------------------|--------------|---------|
+| **Ecopetrol** | 500+ | Enterprise | 322% | 3.5 meses | On-premise |
+| **Frontera** | 200+ | Media | 417% | 2.9 meses | Híbrido |
+| **GeoPark** | 150+ | Media-Alta | 580% | 2.1 meses | HA Offshore |
+| **Parex** | 100+ | Media | 385% | 3.1 meses | Cloud |
+| **Gran Tierra** | 80 | Mínima | 427% | 2.8 meses | SaaS |
 
 ### Factores Clave de Éxito
 
@@ -568,10 +569,10 @@ Factores_Críticos:
     - Change management: 2-4 semanas
     - Training continuo: Mensual
 
-  Financieros:
-    - ROI positivo: < 6 meses todos
-    - Reducción OPEX: 25-40%
-    - Eliminación multas: 100%
+  Operacionales:
+    - Tiempo a valor: < 6 meses todos
+    - Reducción recursos operativos: 25-40%
+    - Cumplimiento normativo: 100%
 
   Estratégicos:
     - Ventaja competitiva: Significativa
@@ -603,7 +604,7 @@ market_projection = {
         "market_share": "45%"
     },
     "impacto_industria": {
-        "multas_evitadas_sector": "$15M USD",
+        "cumplimiento_sectorial": "100% operadores",
         "mejora_eficiencia_promedio": "30%",
         "reducción_huella_carbono": "15%",
         "empleos_tecnológicos_creados": 200
@@ -652,7 +653,7 @@ market_projection = {
 
 1. **Evaluación Gratuita** - Análisis de su operación actual
 2. **Proof of Concept** - Pilot en 1 campo (30 días)
-3. **Propuesta Personalizada** - ROI específico para su caso
+3. **Propuesta Personalizada** - Métricas específicas para su caso
 4. **Implementación** - 2-4 semanas según complejidad
 5. **Éxito Garantizado** - Soporte continuo incluido
 

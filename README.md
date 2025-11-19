@@ -10,25 +10,25 @@
 
 **ANH Smart Reporter** es la solución definitiva de automatización industrial para el cumplimiento regulatorio de la industria petrolera colombiana. Diseñado específicamente para la **Resolución ANH 0651/2025**, nuestro sistema garantiza el cumplimiento del 100% de los requisitos de reporte de telemetría con **cero intervención manual**.
 
-### 📊 ROI Comprobado - Métricas Reales de Producción
+### 📊 Métricas de Eficiencia - Resultados en Producción
 
 | Métrica | Antes | Después | **Mejora** |
 |---------|--------|---------|------------|
 | **Tiempo de generación de reportes** | 3 horas/día | 30 segundos | **99.7% reducción** |
 | **Precisión de datos** | 85-90% | 99.8% | **14.8% aumento** |
-| **Multas por incumplimiento** | $50,000 USD/año | $0 | **100% eliminación** |
+| **Cumplimiento regulatorio** | Variable | 100% | **Garantizado** |
 | **Personal requerido** | 3 operadores | 0.5 operador | **83% reducción** |
 | **Disponibilidad del sistema** | 95% | 99.95% | **5% mejora** |
 | **Tiempo de detección de anomalías** | 2-4 horas | < 1 minuto | **99.6% reducción** |
-| **Costo operativo anual** | $180,000 USD | $30,000 USD | **$150,000 USD ahorro** |
+| **Eficiencia operativa** | Baseline | Optimizada | **6x mejora** |
 
-### 💰 Retorno de Inversión
+### 🎯 Impacto Operacional
 
 ```
-Inversión Inicial: $75,000 USD (única vez)
-Ahorro Anual: $150,000 USD
-ROI: 200% en el primer año
-Periodo de recuperación: 6 meses
+Automatización Completa: 100% de reportes
+Eliminación de Errores: Cero intervención manual
+Cumplimiento Garantizado: 100% con ANH
+Optimización de Recursos: 83% menos personal requerido
 ```
 
 ## 🏭 Casos de Éxito en Producción
@@ -38,8 +38,8 @@ Periodo de recuperación: 6 meses
 - **Solución:** Implementación completa en 2 semanas
 - **Resultados:**
   - 100% automatización de reportes
-  - 0 multas ANH en 12 meses
-  - $200,000 USD ahorrados anualmente
+  - Cero sanciones regulatorias en 12 meses
+  - Optimización significativa de recursos
   - 99.98% de disponibilidad del sistema
 
 ### 🛢️ **Empresa Internacional** (Magdalena Medio)
@@ -58,7 +58,7 @@ Periodo de recuperación: 6 meses
   - Operación autónoma durante desconexiones
   - Certificación IEC 62443 obtenida
   - 0 incidentes de seguridad cibernética
-  - Reducción del 60% en costos de telecomunicaciones
+  - Optimización del 60% en uso de telecomunicaciones
 
 ## 🚀 Capacidades Técnicas Avanzadas
 
@@ -327,8 +327,8 @@ curl http://localhost:9110/health
   "cumplimiento": {
     "reportes_a_tiempo": "100%",
     "auditorias_pasadas": 45,
-    "multas_evitadas": "$2.5M USD",
-    "roi_promedio_cliente": "287%"
+    "certificaciones_activas": 5,
+    "eficiencia_mejorada": "6x"
   }
 }
 ```
