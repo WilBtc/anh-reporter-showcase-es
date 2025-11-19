@@ -362,24 +362,16 @@ Nuestro sistema es compatible con las principales plataformas de automatización
 
 ### 🏢 **INSA Ingeniería y Automatización**
 
-- 📧 **Email**: anh-reporter@insaingenieria.com
-- 📱 **WhatsApp Business**: +57 XXX XXX XXXX
-- 🌐 **Website**: [www.insaingenieria.com/anh-reporter](https://insaingenieria.com)
+- 📧 **Email**: w.aroca@insaing.com
+- 🌐 **Website**: [www.insaing.com]
 - 📍 **Oficina Principal**: Bogotá D.C., Colombia
-- 📍 **Oficinas Regionales**: Villavicencio, Barrancabermeja, Cartagena
 
 ### 💬 **Soporte Técnico 24/7**
 
 - 🎫 **Portal de Soporte**: [support.anh-reporter.com](https://support.anh-reporter.com)
 - 📞 **Hotline**: 01-8000-ANH-HELP
 - 💬 **Chat en Vivo**: Disponible en el dashboard
-- 📚 **Documentación**: [docs.anh-reporter.com](https://docs.anh-reporter.com)
-
-### 🎓 **Recursos y Capacitación**
-
-- 📹 **Videos Tutoriales**: [YouTube Channel](https://youtube.com/@anh-reporter)
-- 📖 **Knowledge Base**: 500+ artículos en español
-- 🎓 **Certificación de Operador**: Programa online de 8 horas
+- 📚 **Documentación**: [docs.anh-reporter.com](https://docs.anh-reporter..com
 - 🏗️ **API Developer Portal**: [developers.anh-reporter.com](https://developers.anh-reporter.com)
 
 ## 📜 Licencia y Términos
